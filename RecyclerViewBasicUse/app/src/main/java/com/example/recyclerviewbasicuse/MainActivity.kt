@@ -2,6 +2,8 @@ package com.example.recyclerviewbasicuse
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.recyclerviewbasicuse.adapter.FruitPortAdapter
 import com.example.recyclerviewbasicuse.bean.Fruit
 import com.example.recyclerviewbasicuse.databinding.ActivityMainBinding
 
@@ -16,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // 纵向滚动
-//        initFruits()
-//        val portLayoutManager = LinearLayoutManager(this)
-//        binding.recyclerView.layoutManager = portLayoutManager
-//        val portAdapter = FruitPortAdapter(fruitList)
-//        binding.recyclerView.adapter = portAdapter
+        initFruits()
+        val portLayoutManager = LinearLayoutManager(this)
+        binding.recyclerView.layoutManager = portLayoutManager
+        val portAdapter = FruitPortAdapter(fruitList)
+        binding.recyclerView.adapter = portAdapter
 
         // 横向滚动
 //        initFruits()
